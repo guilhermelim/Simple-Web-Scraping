@@ -10,9 +10,9 @@ namespace Simple_Web_Scraping
             Console.WriteLine("WEB SCRAPING – COMO FAZER COLETA DE DADOS WEB?");
             // DEFINIÇÕES DE PESQUISA NO DOCUMENTO
             String paginaWeb = DownloadWebPageString.Run("https://pt.stackoverflow.com/questions/302606/");
-            String regularExpression = "<span itemprop=\"upvoteCount\" class=\"vote-count-post \">\\d+</span>"; // // ENCONTRA NA STRING TEXTO USANDO A EXPRESSÃO REGULAR: \d+ 
-            String replaceClearFirst = "<span itemprop=\"upvoteCount\" class=\"vote-count-post \">"; // APAGA O INÍCIO DO TEXTO
-            String replaceClearSecond = "</span>";                    // APAGA O FINAL DO TEXTO
+            String regularExpression = "<span itemprop=\"upvoteCount\" class=\"vote-count-post \">\\d+</span>"; // ENCONTRA NA STRING NÚMEROS DECIMAIS USANDO A EXPRESSÃO REGULAR: \d+ 
+            String replaceClearFirst = "<span itemprop=\"upvoteCount\" class=\"vote-count-post \">"; // DEFINE O INÍCIO DO TEXTO PARA APAGAR
+            String replaceClearSecond = "</span>"; // DEFINE O FINAL DO TEXTO PARA APAGAR
 
             // OBTENDO OS DADOS
             RegexTools regexTools = new RegexTools();
